@@ -1,7 +1,17 @@
 #include<iostream>
 using namespace std;
 
-void deleteAnOSE(Node* head){
+void deleteAnOSE(Node* &head,int pos){
+    if(head==nullptr){
+        return;
+    }
+
+    if(pos==1){
+        Node* curr= head;
+        head=head->next;
+        delete curr;
+        return;
+    }
     // save ,reconnect, delete
 
     Node* curr= head;
@@ -17,3 +27,12 @@ void deleteAnOSE(Node* head){
 
 
 }
+
+Node* deleteAtbeginning(Node* head){
+    Node* curr= head;
+    Node* temp = curr->next;
+    temp=curr;
+    delete curr;
+}
+
+
