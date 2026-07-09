@@ -42,6 +42,33 @@ void insertAtEnd(Node* &head,int val){
     
 
 }
+
+
+void insertAtBeginning(Node* &head){
+
+
+}
+
+
+void deleteAtbeginning(Node* head){
+    if(head==NULL){
+        return;
+
+    }
+
+    if(head->next==NULL){
+        delete head;
+        head=NULL;
+        return;
+
+    }
+    Node* temp=head;
+    Node* temp2= head;
+    while(temp2->next!=head){
+        temp2=temp2->next;
+        
+    }
+}
 int main(){
     return 0 ;
 
